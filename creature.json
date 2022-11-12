@@ -1,0 +1,23 @@
+{
+    "creatues": [
+        {
+            "id": 1,
+            "name": "starter1",
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+            "health": 200,
+            "attack": "Slash",
+            "damage": 25
+        },
+        {
+            "id": 2,
+            "name": "starter2",
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+            "health": 200,
+            "attack": "Punch",
+            "damage": 15
+        },
+        {
+            
+        }
+    ]
+}

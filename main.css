@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    z-index: 1;
+    position: absolute;
+    background-color: antiquewhite;
+    width: 150px;
+    text-align: center;
+}
+#profile h2{
+
+}
+/* #health-bar {
+    height: 50px;
+    width: 200px;
+    background-color: red;
+    transition: 0.5s;
+}
+
+#attack-button {
+    margin: 1rem;
+}
+
+#heal-button {
+    margin: 1rem;
+} */
+
+#header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    color: white;
+    border-bottom: solid 6px black;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: solid 6px black;
+}
+
+#navbar h3 {
+    cursor: pointer;
+}
+
+#creature-list {
+
+}
+
+#creature-list img{
+    border: solid 2px black;
+    height: 8rem;
+    width: auto;
+    margin: 1rem;
+}
+
+#creature-display {
+    display: flex;
+}
+
+#creature-display div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: grey solid 1px;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #e04b52
+}
+
+.image {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+}
