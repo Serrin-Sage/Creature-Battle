@@ -22,3 +22,25 @@
     height: 12rem;
     width: auto;
 }
+
+.healthbar {
+    height: 25px;
+    background-color: green;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+/* #health-bar {
+    height: 50px;
+    width: 200px;
+    background-color: red;
+    transition: 0.5s;
+}
+
+#attack-button {
+    margin: 1rem;
+}
+
+#heal-button {
+    margin: 1rem;
+} */

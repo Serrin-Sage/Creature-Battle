@@ -60,9 +60,10 @@ navbarBattle.addEventListener("click", () => {
 
 navbarStore.addEventListener("click", () => {
     creatureDisplay.style.display = "none";
-    storeDisplay.style.display = "block"
+    storeDisplay.style.display = "flex"
     creatureList.style.display = "none"
 })
+
 const goldAmount = document.getElementById("gold")
 const potionAmount = document.getElementById("potions")
 let gold = 20
@@ -93,19 +94,41 @@ const renderCreature = (Obj) => {
     const creatureImage = document.createElement("img")
     creatureImage.src = Obj.image;
     creatureImage.setAttribute("class", "image")
+
     const creatureName = document.createElement("h3")
-    const healthBar = document.createElement("p")
-    healthBar.style.height = "25px"
-    healthBar.style.backgroundColor = "red";
     creatureName.textContent = Obj.name;
+
+    const healthBar = document.createElement("p")
+    healthBar.setAttribute("class", "healthbar")
     healthBar.style.width = `${Obj.health}px`;
 
+    const attackButton = document.createElement("button")
+    attackButton.textContent = Obj.attack;
+    
+    attackButton.addEventListener("click", () => {
+        let damgage = 50;
+        let health = healthBar.offsetWidth;
+        if (health < 50) {
+            health -= health;
+            healthBar.style.width = `${health}px`
+            console.log(health)
+
+        } else if (health === 0) {
+            healthBar.append(fainted)
+            console.log(fainted)
+        } else {
+            health = health - damgage;
+            healthBar.style.width = `${health}px`
+            console.log(health)
+        }
+    })
     creatureList.append(creatureImage)
 
     creatureImage.addEventListener("click", () => {
         creatureCard.append(creatureImage)
         creatureCard.append(creatureName)
         creatureCard.append(healthBar)
+        creatureCard.append(attackButton)
         creatureDisplay.append(creatureCard)
     })
     // creatureCard.append(creatureImage)
