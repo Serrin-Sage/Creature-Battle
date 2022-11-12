@@ -38,6 +38,31 @@ console.log("JS is running")
 // })
 
 const creatureList = document.getElementById("creature-list")
+const creatureDisplay = document.getElementById("creature-display")
+const storeDisplay = document.getElementById("store-container")
+
+const navbarList = document.querySelectorAll("#navbar h3")[0]
+const navbarBattle = document.querySelectorAll("#navbar h3")[1]
+const navbarStore = document.querySelectorAll("#navbar h3")[2]
+
+
+navbarList.addEventListener("click", () => {
+    creatureDisplay.style.display = "none";
+    storeDisplay.style.display = "none"
+    creatureList.style.display = "block"
+})
+
+navbarBattle.addEventListener("click", () => {
+    creatureDisplay.style.display = "flex";
+    storeDisplay.style.display = "none"
+    creatureList.style.display = "none"
+})
+
+navbarStore.addEventListener("click", () => {
+    creatureDisplay.style.display = "none";
+    storeDisplay.style.display = "block"
+    creatureList.style.display = "none"
+})
 const goldAmount = document.getElementById("gold")
 const potionAmount = document.getElementById("potions")
 let gold = 20

@@ -1,0 +1,10 @@
+#creature-list {
+    display: block;
+}
+
+#creature-list img{
+    border: solid 2px black;
+    height: 8rem;
+    width: auto;
+    margin: 1rem;
+}
