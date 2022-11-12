@@ -106,7 +106,7 @@ const renderCreature = (Obj) => {
     attackButton.textContent = Obj.attack;
     
     attackButton.addEventListener("click", () => {
-        let damgage = 50;
+        let damgage = Obj.damage;
         let health = healthBar.offsetWidth;
         if (health < 50) {
             health -= health;
