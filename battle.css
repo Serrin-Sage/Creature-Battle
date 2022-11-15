@@ -1,8 +1,24 @@
 #creature-display {
     display: none;
+    justify-content: space-between;
 }
 
-#creature-display div {
+#team-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: grey solid 1px;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #e04b52
+}
+
+#enemy-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +46,14 @@
     transition: 0.5s;
 }
 
+
+.enemy-healthbar {
+    height: 25px;
+    background-color: green;
+    border-radius: 8px;
+    transition: 0.5s;
+    width: 200px;
+}
 /* #health-bar {
     height: 50px;
     width: 200px;

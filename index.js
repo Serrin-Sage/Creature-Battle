@@ -89,8 +89,8 @@ const fetchDB = () => {
 
 const renderCreature = (Obj) => {
     const creatureDisplay = document.getElementById("creature-display")
-    const creatureCard = document.createElement("div")
-
+    const creatureCard = document.querySelector(".creature-column")
+    creatureCard.setAttribute("id", "team-column")
     const creatureImage = document.createElement("img")
     creatureImage.src = Obj.image;
     creatureImage.setAttribute("class", "image")
@@ -102,23 +102,24 @@ const renderCreature = (Obj) => {
     healthBar.setAttribute("class", "healthbar")
     healthBar.style.width = `${Obj.health}px`;
 
+    const enemyHealth = document.querySelector(".enemy-healthbar")
     const attackButton = document.createElement("button")
     attackButton.textContent = Obj.attack;
     
     attackButton.addEventListener("click", () => {
-        let damgage = Obj.damage;
-        let health = healthBar.offsetWidth;
+        let damage = Obj.damage;
+        let health = enemyHealth.offsetWidth;
         if (health < 50) {
             health -= health;
-            healthBar.style.width = `${health}px`
+            enemyHealth.style.width = `${health}px`
             console.log(health)
 
         } else if (health === 0) {
-            healthBar.append(fainted)
+            enemyHealth.append(fainted)
             console.log(fainted)
         } else {
-            health = health - damgage;
-            healthBar.style.width = `${health}px`
+            health = health - damage;
+            enemyHealth.style.width = `${health}px`
             console.log(health)
         }
     })
