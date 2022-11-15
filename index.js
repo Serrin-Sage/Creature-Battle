@@ -122,6 +122,23 @@ const renderCreature = (Obj) => {
             console.log(health)
         }
     })
+
+    const healButton = document.createElement("button");
+    healButton.textContent = "Heal";
+
+    healButton.addEventListener("click", () => {
+        let health = healthBar.offsetWidth;
+        if (health < 0) {
+            health = 0;
+        }
+        let heal = 20;
+        health = health + heal;
+        healthBar.style.width = `${health}px`
+        console.log(health)
+    })
+        
+
+    
     creatureList.append(creatureImage)
 
     creatureImage.addEventListener("click", () => {
@@ -129,6 +146,7 @@ const renderCreature = (Obj) => {
         creatureCard.append(creatureName)
         creatureCard.append(healthBar)
         creatureCard.append(attackButton)
+        creatureCard.append(healButton)
         creatureDisplay.append(creatureCard)
     })
     // creatureCard.append(creatureImage)
